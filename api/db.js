@@ -13,10 +13,9 @@ db.connect(function(err) {
     console.log('Connected to mysql');
 });
 
-exports.insertCourse = function(data, readyFn) {
-    console.log(data.post_code);
-
+exports.insertCourse = function(data, callback) {
     db.query('INSERT INTO course SET ? ', data, function(err, results, fields) {
-        readyFn(err, results.insertId);
+        if (err) return callback(err, null);
+        callback(err, results.insertId);
     });
 };

@@ -20,7 +20,7 @@ function handleError(err, req, res) {
 }
 
 app.post('/course', function(req, res) {
-    db.insertTrainingCourse(req.body, function(err, insertedKey) {
+    db.insertCourse(req.body, function(err, insertedKey) {
         if (err) return handleError(err, req, res);
         // TODO: Should we return the inserted item here too?
         res.sendStatus(200);
