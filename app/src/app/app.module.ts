@@ -10,6 +10,7 @@ import { KainosEmployeeComponent } from './kainos-employee/kainos-employee.compo
 import appRoutes from './routerConfig';
 import { TrainerComponent } from './trainer/trainer.component';
 import { HomeComponent } from './home/home.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     KainosEmployeeComponent,
     TrainerComponent,
-    HomeComponent
+    HomeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
