@@ -19,3 +19,10 @@ exports.insertCourse = function(data, callback) {
         callback(err, results.insertId);
     });
 };
+
+exports.getAllCourses = function(callback) {
+    db.query('SELECT * FROM course', function(err, rows) {
+        if (err) return callback(err, null);
+        callback(err, rows);
+    });
+};
