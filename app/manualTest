@@ -1,0 +1,49 @@
+#!/bin/bashß
+
+passedTests=0
+
+response=$(curl --write-out %{http_code} --silent --output /dev/null http://127.0.0.1:8001/)
+
+if [ "$response" -eq 200 ]
+	then
+		echo "test passed, landing page is up"
+		((passedTests+=1))
+fi
+
+# Automated tests for other endpoints currently do not work due to cURL's inabililty to see Javascript
+#
+#response=$(curl --write-out %{http_code} --silent --output /dev/null http://127.0.0.1:8001/kainos-employee)
+#
+#if [ "$response" -eq 200 ]
+#  then
+#    echo "test passed, /kainos-employee"
+#	  ((passedTests+=1))
+#fi
+#
+#response=$(curl --write-out %{http_code} --silent --output /dev/null http://127.0.0.1:8001/trainer)
+#
+#if [ "$response" -eq 200 ]
+#  then
+#    echo "test passed, /trainer is working correctly"
+#		((passedTests+=1))
+#fi
+#
+#response=$(curl --write-out %{http_code} --silent --output /dev/null http://127.0.0.1:8001/map)
+#
+#if [ "$response" -eq 200 ]
+#  then
+#    echo "test passed, /map is working correctly"
+#		((passedTests+=1))
+#fi
+
+if [ "$passedTests" -lt 1 ]
+then
+	echo "Some tests failed, please review"
+fi
+
+if [ "$passedTests" -eq 1 ]
+then
+	echo "All tests passed"
+fi
+
+
