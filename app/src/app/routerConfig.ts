@@ -5,7 +5,7 @@ import { KainosEmployeeComponent } from './kainos-employee/kainos-employee.compo
 import { TrainerComponent } from './trainer/trainer.component';
 import { MapComponent } from './map/map.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   { path: 'kainos-employee',
     component: KainosEmployeeComponent
   },
@@ -17,4 +17,3 @@ const appRoutes: Routes = [
   }
 ];
 
-export default appRoutes;

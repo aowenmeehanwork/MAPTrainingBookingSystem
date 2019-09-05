@@ -23,7 +23,7 @@ app.post('/course', function(req, res) {
     db.insertCourse(req.body, function(err, insertedKey) {
         if (err) return handleError(err, req, res);
         // TODO: Should we return the inserted item here too?
-        res.sendStatus(200);
+        res.send({key: "value"});
     });
 });
 
