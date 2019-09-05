@@ -28,5 +28,5 @@ app.post('/course', function(req, res) {
 });
 
 app.listen(8002, function() {
-    console.log('World API listening in port 8002');
+    console.log('Server listening on port 8002');
 });

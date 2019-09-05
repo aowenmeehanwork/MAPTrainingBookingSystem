@@ -14,7 +14,6 @@ db.connect(function(err) {
 });
 
 exports.insertCourse = function(data, callback) {
-console.log(data);
     db.query('INSERT INTO course SET ? ', data, function(err, results, fields) {
         if (err) return callback(err, null);
         callback(err, results.insertId);
