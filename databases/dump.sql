@@ -29,7 +29,7 @@ CREATE TABLE `Course` (
   `Course_Date` date NOT NULL,
   `Course_Location` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
   `Course_Description` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
-  `Trainer_Name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `Course_Trainer_Name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `Course_Aim` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`Course_Title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
