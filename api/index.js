@@ -26,6 +26,12 @@ app.post('/addemployee', function(req, res) {
     });
 });
 
+app.post('/addtrainingcourse', function(req, res) {
+    db.insertTrainingCourse(req.body, function(insertedKey) {
+        res.sendStatus(200);
+    });
+});
+
 app.post('/addsalesemployee', function(req, res) {
     db.insertSalesEmployee(req.body, function(insertedKey) {
         res.sendStatus(200);
