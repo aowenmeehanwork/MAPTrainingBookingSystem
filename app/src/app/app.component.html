@@ -1,4 +1,4 @@
 <booking-system-header></booking-system-header>
-<booking-system-home></booking-system-home>
-
+<booking-system-login *ngIf="loggedIn == 'none'"></booking-system-login>
+<booking-system-home *ngIf="loggedIn != 'none'"></booking-system-home>
 

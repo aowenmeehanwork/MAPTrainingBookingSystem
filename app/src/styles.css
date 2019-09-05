@@ -22749,3 +22749,18 @@ input#img-4:checked~.nav-dots-people label#img-dot-4 {
 .pagination-centered a {
 	font-size: 18px
 }
+
+.child {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.parent {
+    position: relative;
+}
+
+.error {
+    color: #a94442
+}

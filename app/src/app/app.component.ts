@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'booking-system-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  loggedIn : String;
+
+  constructor(private _router: Router) {
+    this.loggedIn = localStorage.getItem('signin');
+    console.log(this.loggedIn);
+  }
+
+
 }

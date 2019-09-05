@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { appRoutes } from './routerConfig';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { appRoutes } from './routerConfig';
     KainosEmployeeComponent,
     TrainerComponent,
     HomeComponent,
-    MapComponent
+    MapComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,
