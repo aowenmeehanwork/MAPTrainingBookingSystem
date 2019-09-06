@@ -2,13 +2,18 @@
   margin-top: 2rem;
 }
 
+/* .list-item {
+  background: #f4f4f5;
+  margin-bottom: 1rem;
+  padding: 1rem;
+} */
+
 .list-item {
-  display: flex;
   background: #f4f4f5;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.list-item > span {
-  margin-right: 0.5rem;
-}
+/* .list-item > span {
+  margin-right: 2rem;
+} */
