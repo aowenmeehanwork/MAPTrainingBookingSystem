@@ -39,18 +39,18 @@ CREATE TABLE `Course` (
 --
 LOCK TABLES `Course` WRITE;
 /*!40000 ALTER TABLE `Course` DISABLE KEYS */;
-INSERT INTO `Course`(`Course_Title`, `Course_Date`, `Course_Location`, `Course_Description`, `Course_Trainer_Name`, `Course_Aim`, `Course_Max_Availability`) 
-  VALUES ('Angular Workshop','2019-12-06','Boston','Learn Angular','Jeremy','Git Gud', 28),
-    ('Java Workshop','2020-02-02','Amsterdam','Learn Java','Java','Java', 50),
-    ('Security Awareness','2020-12-06','London','Learn About Security','Mark','Aim', 20),
-    ('Neural Networks','2019-11-11','Birmingham','Learn ML','Caleb','Aim', 10),
-    ('Data Filtering','2019-10-10','Dublin','Learn Data Filtering','Andrea','Aim', 23),
-    ('Big Data','2019-09-09','Belfast','Learn About Big Data','Janet','Aim', 40),
-    ('Express','2019-10-09','Tallinn','Learn Express','Tom','Aim', 27),
-    ('Natural Language Processing','2019-09-10','Berlin','Learn NLP','Nathan','Aim', 30),
-    ('Big Data','2019-09-09','Belfast','Learn About Big Data','Janet','Aim', 40),
-    ('UX Design','2019-12-09','London','Learn UX Design','Michael','Aim', 10),
-    ('Agile','2019-09-24','Belfast','Learn About Big Data','Janet','Aim', 40);
+INSERT INTO `Course`(`Course_Title`, `Course_Date`, `Course_Location`, `Course_Description`, `Course_Trainer_Name`, `Course_Aim`, `Course_Max_Availability`, `Course_Current_Bookings`) 
+  VALUES ('Angular Workshop','2019-12-06','Boston','Learn Angular','Jeremy','Git Gud', 28, 19),
+    ('Java Workshop','2020-02-02','Amsterdam','Learn Java','Java','Java', 50, 7),
+    ('Security Awareness','2020-12-06','London','Learn About Security','Mark','Aim', 20, 20),
+    ('Neural Networks','2019-11-11','Birmingham','Learn ML','Caleb','Aim', 10, 3),
+    ('Data Filtering','2019-10-10','Dublin','Learn Data Filtering','Andrea','Aim', 23, 23),
+    ('Big Data','2019-09-09','Belfast','Learn About Big Data','Janet','Aim', 40, 2),
+    ('Express','2019-10-09','Tallinn','Learn Express','Tom','Aim', 27, 1),
+    ('Natural Language Processing','2019-09-10','Berlin','Learn NLP','Nathan','Aim', 30, 21),
+    ('Big Data','2019-09-09','Belfast','Learn About Big Data','Janet','Aim', 40, 33),
+    ('UX Design','2019-12-09','London','Learn UX Design','Michael','Aim', 10, 10),
+    ('Agile','2019-09-24','Belfast','Learn About Big Data','Janet','Aim', 40, 22);
 
 /*!40000 ALTER TABLE `Course` ENABLE KEYS */;
 UNLOCK TABLES;

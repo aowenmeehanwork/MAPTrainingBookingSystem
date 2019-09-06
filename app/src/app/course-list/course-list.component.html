@@ -4,7 +4,7 @@
   <div *ngFor = "let course of data.courses|nameFilter:filterText" class="list-item">
       <span>{{course.Course_Title}}</span>
       <span style="flex-grow: 1"></span>
-      <span class="mr-3" style="color: green">{{checkAvailability(course)}}</span>
+      <span class="mr-3">{{checkAvailability(course)}}</span>
       <a routerLink="?" class="btn btn-primary">More Info</a>
   </div>
 </div>
