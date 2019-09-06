@@ -10,7 +10,7 @@ export class DataService {
   public courses;
 
   constructor(private http: HttpClient) {
-    this.http.get<Course[]>('/api/allcourses').subscribe( res => {
+    this.http.get<Course[]>('/api/course').subscribe( res => {
       console.log(res);
       this.courses = res;
     });

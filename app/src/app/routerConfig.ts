@@ -5,6 +5,7 @@ import { KainosEmployeeComponent } from './kainos-employee/kainos-employee.compo
 import { TrainerComponent } from './trainer/trainer.component';
 import { MapComponent } from './map/map.component';
 import { AddCourseComponent } from "./add-course/add-course.component";
+import { CourseListComponent } from "./course-list/course-list.component";
 
 export const appRoutes: Routes = [
   { 
@@ -13,7 +14,18 @@ export const appRoutes: Routes = [
     pathMatch: 'full' },
   { 
     path: 'kainos-employee', 
-    component: KainosEmployeeComponent
+    component: KainosEmployeeComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'course-list',
+        pathMatch: 'full'
+      },
+      {
+        path: 'course-list',
+        component: CourseListComponent
+      }
+    ]
   },
   { 
     path: 'trainer', 
@@ -25,12 +37,16 @@ export const appRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'add-course',
+        redirectTo: 'course-list',
         pathMatch: 'full'
       },
       {
         path: 'add-course',
         component: AddCourseComponent
+      },
+      {
+        path: 'course-list',
+        component: CourseListComponent
       }
     ]
   }
