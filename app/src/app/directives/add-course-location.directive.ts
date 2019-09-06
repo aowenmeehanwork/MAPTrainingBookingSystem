@@ -12,7 +12,10 @@ export class AddCourseLocationDirective {
   constructor() { }
 
   validate(control: AbstractControl): { [key: string]: any } | null {
-    return (control.value.length <= 10) ? null : { checklocation: true };
+    if (control.value) {
+      return (control.value.length <= 10) ? null : { checklocation: true };
+    } return { checklocation: false };
+
   }
 
 }
