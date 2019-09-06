@@ -17,6 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { appRoutes } from './routerConfig';
 import { NavComponent } from './nav/nav.component';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { AddCourseDirective } from './directives/add-course.directive';
+import { AddCourseLocationDirective } from './directives/add-course-location.directive';
+import { AddCourseDateDirective } from './directives/add-course-date.directive';
+import { AddCourseDescriptionDirective } from './directives/add-course-description.directive';
+import { AddCourseAimDirective } from './directives/add-course-aim.directive';
+import { AddCourseTrainerDirective } from './directives/add-course-trainer.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,13 @@ import { AddCourseComponent } from './add-course/add-course.component';
     HomeComponent,
     MapComponent,
     NavComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    AddCourseDirective,
+    AddCourseLocationDirective,
+    AddCourseDateDirective,
+    AddCourseDescriptionDirective,
+    AddCourseAimDirective,
+    AddCourseTrainerDirective
   ],
   imports: [
     FormsModule,
