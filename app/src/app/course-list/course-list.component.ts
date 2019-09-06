@@ -10,6 +10,7 @@ import { DataService } from '../data.service';
 export class CourseListComponent implements OnInit {
   thisCourse: Course;
   data: DataService;
+  status: String;
   courses = [];
 
 
@@ -32,6 +33,22 @@ export class CourseListComponent implements OnInit {
   onSelect (newCourse: Course) : void{
        this.thisCourse = newCourse;
      }
+
+  // checkAvailability(course: Course): void{
+  //   if (parseInt(this.thisCourse.Course_Max_Availability) - parseInt(this.thisCourse.Course_Current_Bookings) == 0){
+  //     this.status = "Fully Booked";
+  //   } else {
+  //     this.status = "Available";
+  //   }
+  // }
+
+  checkAvailability(course: Course): string{
+    if (parseInt(course.Course_Max_Availability) - parseInt(course.Course_Current_Bookings) == 0){
+      return "Fully Booked";
+    } else {
+      return "Available";
+    }
+  }
 
   ngOnInit() {
   }
