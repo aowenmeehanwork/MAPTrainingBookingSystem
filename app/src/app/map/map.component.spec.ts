@@ -4,11 +4,12 @@ import { MapComponent } from './map.component';
 // import {AppComponent} from "../app.component";
 // import {HeaderComponent} from "../header/header.component";
 // import {HomeComponent} from "../home/home.component";
-// import {KainosEmployeeComponent} from "../kainos-employee/kainos-employee.component";
-// import {TrainerComponent} from "../trainer/trainer.component";
+import {KainosEmployeeComponent} from '../kainos-employee/kainos-employee.component';
+import {TrainerComponent} from '../trainer/trainer.component';
 import {RouterModule, RouterOutlet} from '@angular/router';
 import {NgForm, NgModel} from '@angular/forms';
 import {appRoutes} from '../routerConfig';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MapComponent', () => {
   let component: MapComponent;
@@ -18,12 +19,15 @@ describe('MapComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         MapComponent,
-        RouterOutlet,
+        KainosEmployeeComponent,
+        TrainerComponent,
+        // RouterOutlet,
         NgForm,
         NgModel
       ],
       imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        HttpClientModule
       ]
     }).compileComponents();
   }));
@@ -34,10 +38,7 @@ describe('MapComponent', () => {
     fixture.detectChanges();
   });
 
-  //
-  // AUTO-GENERATED TESTS, TO BE FIXED
-  //
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

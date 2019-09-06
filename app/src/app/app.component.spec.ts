@@ -8,6 +8,7 @@ import {TrainerComponent} from './trainer/trainer.component';
 import {RouterModule, RouterOutlet} from '@angular/router';
 import {NgForm, NgModel} from '@angular/forms';
 import {appRoutes} from './routerConfig';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,34 +20,57 @@ describe('AppComponent', () => {
         MapComponent,
         KainosEmployeeComponent,
         TrainerComponent,
-        RouterOutlet,
         NgForm,
         NgModel
       ],
       imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes),
+        HttpClientModule
       ]
     }).compileComponents();
   }));
-  //
-  // AUTO-GENERATED TESTS, TO BE FIXED
-  //
-  // it('should create the app', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app).toBeTruthy();
-  // });
-  //
-  // it(`should have as title 'app'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app.title).toEqual('app');
-  // });
-  //
-  // it('should render title in a h1 tag', () => {
+
+ // AUTO-GENERATED TESTS, TO BE FIXED
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it(`should have as title 'app'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('app');
+  });
+
+  it('Should have the kainos MAP logo', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    console.log(compiled);
+    expect(compiled.querySelector('body > booking-system-root > booking-system-home > nav > div > ul > li.primary-nav-first.dropdown > a').toBe());
+  });
+
+  // it('Should have a MAP tab', () => {
   //   const fixture = TestBed.createComponent(AppComponent);
   //   fixture.detectChanges();
   //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+  //   expect(compiled.querySelector('body > booking-system-root > booking-system-home > nav > div > ul > li.primary-nav-first.dropdown > a').textContent).toContain('Kainos MAP Engineering Academy logo');
   // });
+  //
+  // it('Should have a Kainos Employee tab', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('body > booking-system-root > booking-system-home > nav > div > ul > li:nth-child(2) > a').textContent).toContain('Kainos MAP Engineering Academy logo');
+  // });
+  //
+  // it('Should have a trainer tab', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('body > booking-system-root > booking-system-home > nav > div > ul > li:nth-child(3) > a').textContent).toContain('Kainos MAP Engineering Academy logo');
+  // });
+
 });
