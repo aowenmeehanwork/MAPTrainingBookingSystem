@@ -1,0 +1,14 @@
+.container {
+  margin-top: 2rem;
+}
+
+.list-item {
+  display: flex;
+  background: #f4f4f5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list-item > span {
+  margin-right: 0.5rem;
+}

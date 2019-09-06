@@ -1,13 +1,9 @@
-<div>
-  <div *ngFor = "let course of data.courses">
-    <div>
-    {{course.Course_Title}}
-    </div>
-    <div>
-      {{course.Course_Date}}
-    </div>
-    <div>
-      {{course.Course_location}}
-    </div>
+<div class="container">
+  <div *ngFor = "let course of data.courses" class="list-item">
+    <span>{{course.Course_Title}}</span>
+    <span>-</span>
+    <span>{{course.Course_Date}}</span>
+    <span>-</span>
+    <span>{{course.Course_Location}}</span>
   </div>
 </div>

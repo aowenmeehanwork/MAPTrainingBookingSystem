@@ -7,12 +7,15 @@ import { ErrorCode } from '@angular/compiler-cli/src/ngtsc/diagnostics';
   providedIn: 'root'
 })
 export class DataService {
-  public courses;
+  public courses = [];
 
   constructor(private http: HttpClient) {
     this.http.get<Course[]>('/api/course').subscribe( res => {
       console.log(res);
-      this.courses = res;
+      for (let course of res) {
+        course.Course_Date = new Date(course.Course_Date).toString().substr(0, 15);
+        this.courses.push(course);
+      }
     });
   }
 
