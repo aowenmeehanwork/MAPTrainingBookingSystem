@@ -21,7 +21,7 @@ exports.insertCourse = function(data, callback) {
 };
 
 exports.getAllCourses = function(callback) {
-    db.query('SELECT * FROM course', function(err, rows) {
+    db.query('SELECT * FROM course ORDER BY  Course_Title ASC, Course_Date ASC', function(err, rows) {
         if (err) return callback(err, null);
         callback(err, rows);
     });
