@@ -12,6 +12,8 @@
   background: #f4f4f5;
   padding: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 /* .list-item > span {

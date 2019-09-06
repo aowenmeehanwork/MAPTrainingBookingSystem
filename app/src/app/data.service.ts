@@ -26,6 +26,7 @@ export class DataService {
             console.log('Course was not added!');
         } else {
             console.log('Added new course!');
+            this.courses.push(newCourse);
         }
     });
   }

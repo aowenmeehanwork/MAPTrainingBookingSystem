@@ -1,13 +1,7 @@
 <div class="container">
   <div *ngFor = "let course of data.courses" class="list-item">
-    <div class="row">
-      <span class="col-md-3">{{course.Course_Title}}</span>
-      <span class="col-md-3">{{course.Course_Date}}</span>
-      <span class="col-md-3">{{course.Course_Location}}</span>
-      <span class="col-md-3">
-        <a class="col-md-6 btn btn-primary">More Info</a>
-        <a class="col-md-6 btn btn-primary">Book</a>
-      </span>
-    </div>
+      <span>{{course.Course_Title}}</span>
+      <span style="flex-grow: 1"></span>
+      <a routerLink="?" class="btn btn-primary">More Info</a>
   </div>
 </div>
