@@ -1,5 +1,5 @@
 <div class="container">
-  <input [(ngModel)]="filterText" placeholder="Search for course"/>
+  <input [(ngModel)]="filterText" placeholder="Search for course"/><span>  🔍</span>
   <br><br>
   <div *ngFor = "let course of data.courses|nameFilter:filterText" class="list-item">
       <span>{{course.Course_Title}}</span>
