@@ -25,6 +25,7 @@ import { AddCourseAimDirective } from './directives/add-course-aim.directive';
 import { AddCourseTrainerDirective } from './directives/add-course-trainer.directive';
 import { CourseListComponent } from './course-list/course-list.component';
 import { MapLandingComponent } from './map-landing/map-landing.component';
+import { NameFilterPipe } from './name-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MapLandingComponent } from './map-landing/map-landing.component';
     AddCourseAimDirective,
     AddCourseTrainerDirective,
     CourseListComponent,
-    MapLandingComponent
+    MapLandingComponent,
+    NameFilterPipe
   ],
   imports: [
     FormsModule,

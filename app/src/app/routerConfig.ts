@@ -10,12 +10,13 @@ import { MapLandingComponent } from "./map-landing/map-landing.component";
 import { MappingsContext } from 'source-list-map';
 
 export const appRoutes: Routes = [
-  { 
-    path: '', 
-    redirectTo: 'kainos-employee', 
-    pathMatch: 'full' },
-  { 
-    path: 'kainos-employee', 
+  {
+    path: '',
+    redirectTo: 'kainos-employee',
+    pathMatch: 'full'
+  },
+  {
+    path: 'kainos-employee',
     component: KainosEmployeeComponent,
     children: [
       {
@@ -29,11 +30,11 @@ export const appRoutes: Routes = [
       }
     ]
   },
-  { 
-    path: 'trainer', 
-    component: TrainerComponent 
+  {
+    path: 'trainer',
+    component: TrainerComponent
   },
-  { 
+  {
     path: 'map',
     component: MapLandingComponent
   },
