@@ -8,6 +8,7 @@ import { AddCourseComponent } from "./add-course/add-course.component";
 import { CourseListComponent } from "./course-list/course-list.component";
 import { MapLandingComponent } from "./map-landing/map-landing.component";
 import { MappingsContext } from 'source-list-map';
+import { CourseDetailsComponent } from './course-details/course-details.component'
 
 export const appRoutes: Routes = [
   {
@@ -37,6 +38,10 @@ export const appRoutes: Routes = [
   {
     path: 'map',
     component: MapLandingComponent
+  },
+  {
+      path: 'hello',
+      component: CourseDetailsComponent
   },
   {
     path: 'map-tools',
