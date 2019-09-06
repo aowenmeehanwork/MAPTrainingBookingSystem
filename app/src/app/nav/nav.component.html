@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default navbar-desktop  hidden-xs hidden-sm primary-navbar">
+  <div class="container">
+    <ul class="primary-navigation">
+
+      <li *ngFor="let link of links" class="primary-nav-first dropdown" style="width: 33.33%; background-color: transparent;">
+        <a routerLink="{{link.src}}">{{link.title}}</a>
+      </li>
+
+    </ul> <!-- ./primary-navigation -->
+  </div><!-- ./container -->
+</nav>

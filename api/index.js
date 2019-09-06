@@ -27,6 +27,13 @@ app.post('/course', function(req, res) {
     });
 });
 
+app.get('/course', function(req, res) {
+    db.getAllCourses(function(err, rows) {
+        if (err) return handleError(err, req, res);
+        res.send(rows);
+    });
+});
+
 app.listen(8002, function() {
     console.log('Server listening on port 8002');
 });
