@@ -5,7 +5,7 @@
     <div class="form-group">
       <label><span class="error">*</span>Title</label>
       <input [(ngModel)]="newCourse.Course_Title" name="course_title" type="text" class="form-control" id="inputCourseTitle" placeholder="Enter Course Title" required bookingSystemAddCourse>
-      <span class="error" *ngIf="addForm.hasError('checktitle', 'course_title')">Title cannot be empty andneeds to be less than 100 characters!</span>
+      <span class="error" *ngIf="addForm.hasError('checktitle', 'course_title')">Title needs to be less than 100 characters!</span>
       <span class="error" *ngIf="addForm.hasError('required', 'course_title')"></span>
     </div>
     <div class="form-group">
@@ -26,29 +26,37 @@
     <div class="form-group">
       <label><span class="error">*</span>Date</label>
       <input [(ngModel)]="newCourse.Course_Date" name="course_date" type="text" class="form-control" id="inputCourseDate" placeholder="Enter Course Date" required bookingSystemAddCourseDate>
-      <span class="error" *ngIf="addForm.hasError('checkdate', 'course_date')">Date cannot be empty and needs to be of format: YYYY-MM-DD</span>
+      <span class="error" *ngIf="addForm.hasError('checkdate', 'course_date')">Date needs to be of format: YYYY-MM-DD</span>
       <span class="error" *ngIf="addForm.hasError('required', 'course_date')"></span>
     </div>
     <div class="form-group">
       <label><span class="error">*</span>Description</label>
       <textarea [(ngModel)]="newCourse.Course_Description" name="course_description" class="form-control" id="inputCourseDescription" placeholder="Enter Course Description" required bookingSystemAddCourseDescription></textarea>
-      <span class="error" *ngIf="addForm.hasError('checkdescription', 'course_description')">Description cannot be empty and needs to be less than 300 characters!</span>
+      <span class="error" *ngIf="addForm.hasError('checkdescription', 'course_description')">Description needs to be less than 300 characters!</span>
       <span class="error" *ngIf="addForm.hasError('required', 'course_description')"></span>
     </div>
     <div class="form-group">
       <label><span class="error">*</span>Aim</label>
       <input [(ngModel)]="newCourse.Course_Aim" name="course_aim" type="text" class="form-control" id="inputCourseAim" placeholder="Enter Course Aim" required bookingSystemAddCourseAim>
-      <span class="error" *ngIf="addForm.hasError('checkaim', 'course_aim')">Course aim cannot be empty and needs to be less than 200 characters!</span>
+      <span class="error" *ngIf="addForm.hasError('checkaim', 'course_aim')">Course aim needs to be less than 200 characters!</span>
       <span class="error" *ngIf="addForm.hasError('required', 'course_aim')"></span>
     </div>
     <div class="form-group">
       <label><span class="error">*</span>Trainer Name</label>
       <input [(ngModel)]="newCourse.Course_Trainer_Name" type="text" name="course_trainer_name" type="text" class="form-control" id="inputCourseTrainerName" placeholder="Enter Course Tranier Name" required bookingSystemAddCourseTrainer>
-      <span class="error" *ngIf="addForm.hasError('checktrainername', 'course_trainer_name')">Trainer name cannot be empty and needs to be less than 100 characters!</span>
+      <span class="error" *ngIf="addForm.hasError('checktrainername', 'course_trainer_name')">Trainer name needs to be less than 100 characters!</span>
       <span class="error" *ngIf="addForm.hasError('required', 'course_trainer_name')"></span>
+    </div>
+    <div class="form-group">
+      <label><span class="error">*</span>Number of spaces</label>
+      <input [(ngModel)]="newCourse.Course_Max_Availability" type="number" name="course_max_availability" type="text" class="form-control" id="inputMaxAvailability" placeholder="Enter number of spaces" required>
+      <span class="error" *ngIf="addForm.hasError('required', 'course_max_availability')"></span>
     </div>
     <input type="submit" class="btn btn-primary" [disabled]="!addForm.valid">
   </form>
 
-  <div style="color: green">{{success}}</div>
+  <br>
+  <h4 style="color: green">{{success}}</h4>
 </div>
+
+<br>
