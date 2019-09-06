@@ -5,21 +5,26 @@ import { KainosEmployeeComponent } from './kainos-employee/kainos-employee.compo
 import { TrainerComponent } from './trainer/trainer.component';
 import { MapComponent } from './map/map.component';
 import { AddCourseComponent } from "./add-course/add-course.component";
+import { LoginComponent } from './login/login.component';
 
 export const appRoutes: Routes = [
-  { 
-    path: '', 
-    redirectTo: 'kainos-employee', 
+  {
+    path: '',
+    redirectTo: 'login',
     pathMatch: 'full' },
-  { 
-    path: 'kainos-employee', 
+  {
+    path: 'kainos-employee',
     component: KainosEmployeeComponent
   },
-  { 
-    path: 'trainer', 
-    component: TrainerComponent 
+  {
+    path: 'login',
+    component: LoginComponent
   },
-  { 
+  {
+    path: 'trainer',
+    component: TrainerComponent
+  },
+  {
     path: 'map',
     component: MapComponent,
     children: [

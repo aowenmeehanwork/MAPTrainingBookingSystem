@@ -26,3 +26,15 @@ exports.getAllCourses = function(callback) {
         callback(err, rows);
     });
 };
+
+exports.retrieveUserByEmail = function (email, callback, error) {
+  db.query("SELECT * FROM User WHERE Email = ?",
+    [email],
+    function (err, rows) {
+      if (err) {
+        error(err);
+        return;
+      }
+      callback(rows);
+    });
+};

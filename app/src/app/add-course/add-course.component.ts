@@ -22,7 +22,7 @@ export class AddCourseComponent implements OnInit {
   addCourse(addForm): void {
     if (addForm.valid) {
         const courseToAdd: Course = this.newCourse;
-        courseToAdd.Course_Current_Bookings = 0;
+        courseToAdd.Course_Current_Bookings = "0";
         this.newCourse = new Course();
         this.data.addCourse(courseToAdd);
 

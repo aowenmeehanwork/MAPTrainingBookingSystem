@@ -34,6 +34,20 @@ app.get('/course', function(req, res) {
     });
 });
 
+app.get('/getUser/:email', function (req, res) {
+  let email = req.params.email;
+  db.retrieveUserByEmail(email, function (rows) {
+    res.send(rows[0]);
+  }, function (error) {
+    console.log(error.code);
+    console.log(error.sqlMessage);
+    res.status(500).send({
+      message: 'Database error. ' + error.sqlMessage
+    });
+  })
+});
+
+
 app.listen(8002, function() {
     console.log('Server listening on port 8002');
 });

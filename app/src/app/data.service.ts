@@ -2,11 +2,14 @@ import { Injectable } from '@angular/core';
 import { Course } from './course';
 import { HttpClient } from '@angular/common/http';
 import { ErrorCode } from '@angular/compiler-cli/src/ngtsc/diagnostics';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+
+  public user;
 
   constructor(private http: HttpClient) { }
 
@@ -19,4 +22,12 @@ export class DataService {
         }
     });
   }
+
+  async getUser(user: User): Promise<User> {
+      this.user = await this.http.get<User>('/api/getUser/' + user.Email)
+      .toPromise()
+      .then(resp => resp as User);
+
+      return this.user;
+    }
 }
