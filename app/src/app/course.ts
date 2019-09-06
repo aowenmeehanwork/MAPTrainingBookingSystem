@@ -1,10 +1,10 @@
 export class Course {
-    Course_Title: String;
-    Course_Date: String;
-    Course_Location: String;
-    Course_Description: String;
-    Course_Aim: String;
-    Course_Trainer_Name: String;
-    Course_Max_Availability: int;
-    Course_Current_Bookings: int;
+    Course_Title: string;
+    Course_Date: string;
+    Course_Location: string;
+    Course_Description: string;
+    Course_Aim: string;
+    Course_Trainer_Name: string;
+    Course_Max_Availability: number;
+    Course_Current_Bookings: number;
 }

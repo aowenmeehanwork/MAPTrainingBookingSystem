@@ -5,6 +5,7 @@ import { KainosEmployeeComponent } from './kainos-employee/kainos-employee.compo
 import { TrainerComponent } from './trainer/trainer.component';
 import { MapComponent } from './map/map.component';
 import { AddCourseComponent } from "./add-course/add-course.component";
+import { MapLandingComponent } from "./map-landing/map-landing.component";
 
 export const appRoutes: Routes = [
   { 
@@ -24,9 +25,9 @@ export const appRoutes: Routes = [
     component: MapComponent,
     children: [
       {
-        path: '',
-        redirectTo: 'add-course',
-        pathMatch: 'full'
+        path: 'map-landing',
+        pathMatch: 'full',
+        component: MapLandingComponent
       },
       {
         path: 'add-course',

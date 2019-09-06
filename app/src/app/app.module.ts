@@ -23,6 +23,7 @@ import { AddCourseDateDirective } from './directives/add-course-date.directive';
 import { AddCourseDescriptionDirective } from './directives/add-course-description.directive';
 import { AddCourseAimDirective } from './directives/add-course-aim.directive';
 import { AddCourseTrainerDirective } from './directives/add-course-trainer.directive';
+import { MapLandingComponent } from './map-landing/map-landing.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AddCourseTrainerDirective } from './directives/add-course-trainer.direc
     AddCourseDateDirective,
     AddCourseDescriptionDirective,
     AddCourseAimDirective,
-    AddCourseTrainerDirective
+    AddCourseTrainerDirective,
+    MapLandingComponent
   ],
   imports: [
     FormsModule,
