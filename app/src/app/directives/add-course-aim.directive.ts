@@ -11,7 +11,9 @@ export class AddCourseAimDirective {
   constructor() { }
 
   validate(control: AbstractControl): { [key: string]: any } | null {
-    return (control.value.length <= 200) ? null : { checkaim: true };
+    if (control.value){
+      return (control.value.length <= 200) ? null : { checkaim: true };
+    } return { checkaim: false };
   }
 
 }

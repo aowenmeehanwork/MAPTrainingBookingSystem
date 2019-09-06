@@ -12,6 +12,8 @@ export class AddCourseTrainerDirective {
   constructor() { }
 
   validate(control: AbstractControl): { [key: string]: any } | null {
-    return (control.value.length <= 100) ? null : { checktrainername: true };
+    if (control.value){
+      return (control.value.length <= 100) ? null : { checktrainername: true };
+    } return { checktrainername: false };
   }
 }

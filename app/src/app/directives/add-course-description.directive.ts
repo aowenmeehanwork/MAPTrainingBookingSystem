@@ -11,7 +11,10 @@ export class AddCourseDescriptionDirective {
   constructor() { }
 
   validate(control: AbstractControl): { [key: string]: any } | null {
-    return (control.value.length <= 300) ? null : { checkdescription: true };
+    if (control.value){
+      return (control.value.length <= 300) ? null : { checkdescription: true };
+    } return { checkdescription: false };
+
   }
 
 }
