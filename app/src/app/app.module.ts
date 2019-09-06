@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { appRoutes } from './routerConfig';
+import { NavComponent } from './nav/nav.component';
+import { AddCourseComponent } from './add-course/add-course.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { appRoutes } from './routerConfig';
     KainosEmployeeComponent,
     TrainerComponent,
     HomeComponent,
-    MapComponent
+    MapComponent,
+    NavComponent,
+    AddCourseComponent
   ],
   imports: [
     FormsModule,
