@@ -15,6 +15,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { appRoutes } from './routerConfig';
+import { NavComponent } from './nav/nav.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { AddCourseDirective } from './directives/add-course.directive';
+import { AddCourseLocationDirective } from './directives/add-course-location.directive';
+import { AddCourseDateDirective } from './directives/add-course-date.directive';
+import { AddCourseDescriptionDirective } from './directives/add-course-description.directive';
+import { AddCourseAimDirective } from './directives/add-course-aim.directive';
+import { AddCourseTrainerDirective } from './directives/add-course-trainer.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +31,15 @@ import { appRoutes } from './routerConfig';
     KainosEmployeeComponent,
     TrainerComponent,
     HomeComponent,
-    MapComponent
+    MapComponent,
+    NavComponent,
+    AddCourseComponent,
+    AddCourseDirective,
+    AddCourseLocationDirective,
+    AddCourseDateDirective,
+    AddCourseDescriptionDirective,
+    AddCourseAimDirective,
+    AddCourseTrainerDirective
   ],
   imports: [
     FormsModule,
