@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { appRoutes } from './routerConfig';
 import { NavComponent } from './nav/nav.component';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { CourseListComponent } from './course-list/course-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddCourseComponent } from './add-course/add-course.component';
     HomeComponent,
     MapComponent,
     NavComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    CourseListComponent
   ],
   imports: [
     FormsModule,

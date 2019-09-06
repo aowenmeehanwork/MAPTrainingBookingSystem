@@ -7,8 +7,15 @@ import { ErrorCode } from '@angular/compiler-cli/src/ngtsc/diagnostics';
   providedIn: 'root'
 })
 export class DataService {
+  public courses;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.http.get<Course[]>('/api/allcourses').subscribe( res => {
+      console.log(res);
+      this.courses = res;
+    });
+  }
+
 
   public addCourse(newCourse: Course): void {
     this.http.post<[Course, ErrorCode]>('/api/course', newCourse).subscribe( res => {
