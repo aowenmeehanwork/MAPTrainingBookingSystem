@@ -24,6 +24,7 @@ import { AddCourseDescriptionDirective } from './directives/add-course-descripti
 import { AddCourseAimDirective } from './directives/add-course-aim.directive';
 import { AddCourseTrainerDirective } from './directives/add-course-trainer.directive';
 import { CourseListComponent } from './course-list/course-list.component';
+import { NameFilterPipe } from './name-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CourseListComponent } from './course-list/course-list.component';
     AddCourseDescriptionDirective,
     AddCourseAimDirective,
     AddCourseTrainerDirective,
-    CourseListComponent
+    CourseListComponent,
+    NameFilterPipe
   ],
   imports: [
     FormsModule,

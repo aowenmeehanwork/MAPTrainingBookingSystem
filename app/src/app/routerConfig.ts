@@ -8,12 +8,13 @@ import { AddCourseComponent } from "./add-course/add-course.component";
 import { CourseListComponent } from "./course-list/course-list.component";
 
 export const appRoutes: Routes = [
-  { 
-    path: '', 
-    redirectTo: 'kainos-employee', 
-    pathMatch: 'full' },
-  { 
-    path: 'kainos-employee', 
+  {
+    path: '',
+    redirectTo: 'kainos-employee',
+    pathMatch: 'full'
+  },
+  {
+    path: 'kainos-employee',
     component: KainosEmployeeComponent,
     children: [
       {
@@ -27,11 +28,11 @@ export const appRoutes: Routes = [
       }
     ]
   },
-  { 
-    path: 'trainer', 
-    component: TrainerComponent 
+  {
+    path: 'trainer',
+    component: TrainerComponent
   },
-  { 
+  {
     path: 'map',
     component: MapComponent,
     children: [
