@@ -6,6 +6,8 @@ import { TrainerComponent } from './trainer/trainer.component';
 import { MapComponent } from './map/map.component';
 import { AddCourseComponent } from "./add-course/add-course.component";
 import { CourseListComponent } from "./course-list/course-list.component";
+import { MapLandingComponent } from "./map-landing/map-landing.component";
+import { MappingsContext } from 'source-list-map';
 
 export const appRoutes: Routes = [
   { 
@@ -33,12 +35,16 @@ export const appRoutes: Routes = [
   },
   { 
     path: 'map',
+    component: MapLandingComponent
+  },
+  {
+    path: 'map-tools',
     component: MapComponent,
     children: [
       {
         path: '',
-        redirectTo: 'course-list',
-        pathMatch: 'full'
+        pathMatch: 'full',
+        redirectTo: 'course-list'
       },
       {
         path: 'add-course',
