@@ -9,6 +9,8 @@ import { DataService } from '../data.service';
 })
 export class AddCourseComponent implements OnInit {
 
+  public success;
+
   @Input()
   public newCourse: Course;
   data: DataService;
@@ -22,6 +24,7 @@ export class AddCourseComponent implements OnInit {
         const courseToAdd: Course = this.newCourse;
         this.newCourse = new Course();
         this.data.addCourse(courseToAdd);
+        success = 'Course added successfully!';
     } else {
         console.error('Add course form is invalid');
     }
