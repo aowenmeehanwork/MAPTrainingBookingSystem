@@ -32,6 +32,8 @@ CREATE TABLE `Course` (
   `Course_Description` varchar(300) COLLATE utf8mb4_general_ci NOT NULL,
   `Course_Trainer_Name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `Course_Aim` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `Course_Max_Availability` TINYINT NOT NULL,
+  `Course_Current_Bookings` TINYINT DEFAULT 0,
   PRIMARY KEY (`Course_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -42,7 +44,7 @@ CREATE TABLE `Course` (
 
 LOCK TABLES `Course` WRITE;
 /*!40000 ALTER TABLE `Course` DISABLE KEYS */;
-INSERT INTO `Course`(`Course_Title`, `Course_Date`, `Course_Location`, `Course_Description`, `Course_Trainer_Name`, `Course_Aim`) VALUES ('Angular workshop','0001-12-06','Boston','Learn Angular','Jeremy','Git Gud'),('Java Workshop','2001-02-02','Amsterdam','Learn Java','Java','Java');
+INSERT INTO `Course`(`Course_Title`, `Course_Date`, `Course_Location`, `Course_Description`, `Course_Trainer_Name`, `Course_Aim`, `Course_Max_Availability`) VALUES ('Angular workshop','0001-12-06','Boston','Learn Angular','Jeremy','Git Gud', 28),('Java Workshop','2001-02-02','Amsterdam','Learn Java','Java','Java', 50);
 /*!40000 ALTER TABLE `Course` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
